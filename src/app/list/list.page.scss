@@ -1,0 +1,32 @@
+.listPage {
+ .setfullHeight {
+  height: -webkit-fill-available;
+
+  .setButtons {
+   bottom: 50px;
+  }
+ }
+}
+
+.loginPage {
+ .setfullHeight {
+  height: -webkit-fill-available;
+ }
+
+ .set-first-row-height {
+  height: 300px;
+  background: var(--ion-color-tertiary);
+  padding: 0;
+  margin: 0;
+ }
+
+ .set-second-row-height {
+  height: calc(100% - 300px);
+
+  .set-icon {
+   position: absolute;
+   right: 10px;
+   top: 20px;
+  }
+ }
+}

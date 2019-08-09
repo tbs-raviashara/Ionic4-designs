@@ -1,0 +1,31 @@
+.setCol-1 {
+ height: 13rem;
+ background: var(--ion-color-light_blue);
+ border-bottom-left-radius: 125px;
+ border-bottom-right-radius: 125px;
+ padding-top: 2rem;
+
+ img {
+  background: var(--ion-color-light_blue-contrast);
+ }
+}
+
+.setCol-2 {
+ top: -4.5rem;
+ background: var(--ion-color-light_blue-contrast);
+
+ .set-card {
+  height: 210px;
+ }
+}
+
+.setCol-3 {
+ top: -6rem;
+}
+
+.header-ios ion-toolbar:last-child {
+ --border-width: 0 !important;
+}
+.set-bottom{
+ margin-bottom: 5px;
+}

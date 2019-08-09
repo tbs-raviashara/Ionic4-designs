@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Login 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="loginPage">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" text-center class="setLogoPadding">
+        <img src="../../assets/icon/favicon.png" />
+      </ion-col>
+      <ion-col size="12" text-center>
+        <p class="login-Heading" no-margin>
+          <ion-text color="primary">Welcome to PinPin</ion-text>
+        </p>
+        <h5 color="primary" no-margin>Enter your credentials to log in</h5>
+      </ion-col>
+      <ion-col size="12" class="set-z-index-first-col">
+        <ion-card color="primary" class="card-border-radius">
+          <ion-item color="primary" no-padding margin-horizontal>
+            <ion-label position="stacked">
+              <ion-text color="secondary">Username</ion-text>
+            </ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <ion-item color="primary" no-padding margin-horizontal>
+            <ion-label position="stacked">
+              <ion-text color="secondary">Password</ion-text>
+            </ion-label>
+            <ion-input type="password"></ion-input>
+          </ion-item>
+          <p text-center>
+            <ion-text color="secondary">Forgot your password?</ion-text>
+          </p>
+          <p text-center no-margin>
+            <ion-button shape="round" color="secondary">
+              <ion-text color="primary">Login in</ion-text>
+            </ion-button>
+          </p>
+        </ion-card>
+      </ion-col>
+      <ion-col size="10" offset="1" class="set_col">
+        <div text-center class="set_createAccount">
+          <ion-text color="medium">
+            <h5 no-margin>Create a new account</h5>
+          </ion-text>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

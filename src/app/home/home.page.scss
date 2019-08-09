@@ -1,0 +1,33 @@
+.loginPage {
+
+ .setLogoPadding {
+  padding-top: 50px;
+ }
+
+ .login-Heading {
+  font-size: 2.3em;
+ }
+
+ .set-z-index-first-col {
+  z-index: 2;
+
+  .card-border-radius {
+   border-radius: 25px;
+   padding: 16px;
+   margin-top: 0;
+  }
+ }
+
+ .set_col {
+  margin-top: -40px;
+  z-index: 1;
+
+  .set_createAccount {
+   background: var(--ion-color-primary);
+   padding: 18px;
+   border-bottom-left-radius: 25px;
+   border-bottom-right-radius: 25px;
+   z-index: 1;
+  }
+ }
+}
