@@ -1,0 +1,35 @@
+.setBGColor {
+    @extend .costomColorOrange;
+    height: 35vh;
+    border-bottom-left-radius: 100px;
+    .setmargin_top {
+        margin-top: 10vh;
+    }
+    .setFontSize {
+        font-size: 1.8em;
+    }
+}
+
+.costomColorOrange {
+    background: #f55b1e;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #f5851f, #f55b1e);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #f5851f, #f55b1e);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    --background: linear-gradient(to left, #f5851f, #f55b1e);
+}
+
+.setRadius {
+    border-radius: 20px;
+}
+
+.setBottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    .set_text_color {
+        color: #f55b1e;
+    }
+}

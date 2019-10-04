@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'login-3',
     loadChildren: './login3/login3.module#Login3PageModule'
+  },
+  {
+    path: 'login-4',
+    loadChildren: './login4/login4.module#Login4PageModule'
   }
 ];
 
