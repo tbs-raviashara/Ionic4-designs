@@ -9,13 +9,17 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FileEncryption } from '@ionic-native/file-encryption/ngx';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { HttpClientModule } from "@angular/common/http";
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    NgSelectModule,
   ],
   providers: [
     StatusBar,
