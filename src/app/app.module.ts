@@ -11,6 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { FileEncryption } from '@ionic-native/file-encryption/ngx';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { HttpClientModule } from "@angular/common/http";
+import { SQLite } from '@ionic-native/sqlite/ngx';
+import { SqLiteService } from './services/sq-lite.service';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -22,9 +25,11 @@ import { HttpClientModule } from "@angular/common/http";
     NgSelectModule,
   ],
   providers: [
+    SqLiteService,
     StatusBar,
     SplashScreen,
     FileEncryption,
+    SQLite,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

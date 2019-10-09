@@ -10,7 +10,7 @@
 <ion-content>
     <ion-row>
         <ion-col size="12" padding>
-            <ng-select [items]="accounts" bindLabel="name" bindValue="id" [(ngModel)]="selectedAccount"></ng-select>
+            <ng-select [items]="accounts" bindLabel="Name" bindValue="cid" [(ngModel)]="selectedAccount" (search)="searchResult($event)"></ng-select>
         </ion-col>
         <ion-col padding class="col-borderBottom" size="12">
             <ion-slides pager="true" [options]="slideOpts">
