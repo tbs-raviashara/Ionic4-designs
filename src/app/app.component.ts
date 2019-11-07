@@ -30,6 +30,26 @@ export class AppComponent {
       title: 'Food List',
       url: '/food-list',
       icon: 'list'
+    },
+    {
+      title: 'Peoject List',
+      url: '/project-list',
+      icon: 'list'
+    },
+    {
+      title: 'Task List',
+      url: '/tasklist',
+      icon: 'list'
+    },
+    {
+      title: 'Task Details',
+      url: '/task-details',
+      icon: 'list'
+    },
+    {
+      title: 'Message List',
+      url: '/message-list',
+      icon: 'list'
     }
   ];
 

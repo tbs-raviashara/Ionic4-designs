@@ -16,22 +16,22 @@ export class FoodListPage implements OnInit {
   constructor(public http: HttpClient, public service: SqLiteService) { }
 
   ngOnInit() {
-    if (localStorage.isStorage !== "true") {
-      this.service.createDB();
-      this.http.get('https://jsonplaceholder.typicode.com/comments').subscribe((response: any) => {
-        for (let item of response) {
-          this.service.insert_customers_Row(item.id, item.name);
-        }
-        this.getwentyRecord();
-        localStorage.isStorage = true;
-      });
-    } else {
-      this.service.openDB().then((response: any) => {
-        if (response === "success") {
-          this.getwentyRecord();
-        }
-      });
-    }
+    // if (localStorage.isStorage !== "true") {
+    //   this.service.createDB();
+    //   this.http.get('https://jsonplaceholder.typicode.com/comments').subscribe((response: any) => {
+    //     for (let item of response) {
+    //       this.service.insert_customers_Row(item.id, item.name);
+    //     }
+    //     this.getwentyRecord();
+    //     localStorage.isStorage = true;
+    //   });
+    // } else {
+    //   this.service.openDB().then((response: any) => {
+    //     if (response === "success") {
+    //       this.getwentyRecord();
+    //     }
+    //   });
+    // }
   }
 
   getwentyRecord() {

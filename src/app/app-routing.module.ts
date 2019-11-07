@@ -26,6 +26,22 @@ const routes: Routes = [
   {
     path: 'login-4',
     loadChildren: './login4/login4.module#Login4PageModule'
+  },
+  {
+    path: 'project-list',
+    loadChildren: './project-list/project-list.module#ProjectListPageModule'
+  },
+  {
+    path: 'tasklist',
+    loadChildren: './tasklist/tasklist.module#TasklistPageModule'
+  },
+  {
+    path: 'task-details',
+    loadChildren: './task-details/task-details.module#TaskDetailsPageModule'
+  },
+  {
+    path: 'message-list',
+    loadChildren: './message-list/message-list.module#MessageListPageModule'
   }
 ];
 
