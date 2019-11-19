@@ -42,6 +42,10 @@ const routes: Routes = [
   {
     path: 'message-list',
     loadChildren: './message-list/message-list.module#MessageListPageModule'
+  },
+  {
+    path: 'login-5',
+    loadChildren: './login5/login5.module#Login5PageModule'
   }
 ];
 

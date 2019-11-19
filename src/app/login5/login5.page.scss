@@ -1,0 +1,23 @@
+.login-5 {
+  .firstDiv {
+    background-color: #067b7a;
+    color: #ffffff;
+    padding-left: 12%;
+    height: 200px;
+  }
+  .loginForm {
+    margin-top: -53px;
+    background-color: #ffff;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    .email {
+      padding-top: 35px;
+    }
+  }
+  .signUP{
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+  }
+}
