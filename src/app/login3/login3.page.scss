@@ -12,8 +12,12 @@
 .setCol-2 {
     top: -4.5rem;
     background: var(--ion-color-light_blue-contrast);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
     .set-card {
         height: 210px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
     }
 }
 
