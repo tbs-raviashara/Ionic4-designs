@@ -28,8 +28,8 @@
         }
         .userImage {
           position: absolute;
-          width: 50px;
-          border-radius: 10px;
+          width: 30px;
+          border-radius: 50%;
         }
       }
       .message.incoming {
@@ -41,7 +41,10 @@
           color: white;
           border-radius: 0 10px 10px 25px;
           background: #703fce;
-          margin-left: 60px;
+          margin-left: 40px;
+        }
+        .userImage{
+          margin-top: 8px;
         }
       }
       .message.outgoing {
@@ -51,8 +54,12 @@
         align-items: flex-end;
         p {
           border-radius: 10px 0px 25px 10px;
-          background: #ffffff;
-          margin-right: 60px;
+          background: #25a4b1;
+          margin-right: 40px;
+          color: #fff;
+        }
+        .userImage{
+          margin-top: -15px;
         }
       }
     }
