@@ -11,6 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { HttpClientModule } from "@angular/common/http";
 import { Printer } from '@ionic-native/printer/ngx';
+import { FileOpener } from '@ionic-native/file-opener/ngx';
+import { File } from '@ionic-native/file/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,6 +28,8 @@ import { Printer } from '@ionic-native/printer/ngx';
     StatusBar,
     SplashScreen,
     Printer,
+    File,
+    FileOpener,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
