@@ -8,11 +8,9 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { FileEncryption } from '@ionic-native/file-encryption/ngx';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { HttpClientModule } from "@angular/common/http";
-import { SQLite } from '@ionic-native/sqlite/ngx';
-import { SqLiteService } from './services/sq-lite.service';
+import { Printer } from '@ionic-native/printer/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,11 +23,9 @@ import { SqLiteService } from './services/sq-lite.service';
     NgSelectModule,
   ],
   providers: [
-    SqLiteService,
     StatusBar,
     SplashScreen,
-    FileEncryption,
-    SQLite,
+    Printer,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

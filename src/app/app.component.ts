@@ -54,6 +54,11 @@ export class AppComponent {
       title: 'Message List',
       url: '/message-list',
       icon: 'list'
+    },
+    {
+      title: 'PDF Demo',
+      url: '/pdf-demo',
+      icon: 'list'
     }
   ];
 

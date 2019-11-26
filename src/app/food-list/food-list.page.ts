@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { SqLiteService } from '../services/sq-lite.service';
 @Component({
   selector: 'app-food-list',
   templateUrl: './food-list.page.html',
@@ -13,7 +12,7 @@ export class FoodListPage implements OnInit {
   };
   public accounts: any = [];
   public selectedAccount: any;
-  constructor(public http: HttpClient, public service: SqLiteService) { }
+  constructor(public http: HttpClient) { }
 
   ngOnInit() {
     // if (localStorage.isStorage !== "true") {
@@ -32,27 +31,5 @@ export class FoodListPage implements OnInit {
     //     }
     //   });
     // }
-  }
-
-  getwentyRecord() {
-    this.service.getRows_customers().then((response: any) => {
-      this.accounts = [];
-      for (var i = 0; i < 20; i++) {
-        this.accounts.push(response.rows.item(i));
-      }
-    });
-  }
-
-  searchResult(val: any) {
-    if (val.term === "") {
-      this.getwentyRecord();
-      return false;
-    }
-    this.service.getSearchRows_customers(val.term).then((res: any) => {
-      this.accounts = [];
-      for (var i = 0; i < res.rows.length; i++) {
-        this.accounts.push(res.rows.item(i));
-      }
-    });
   }
 }

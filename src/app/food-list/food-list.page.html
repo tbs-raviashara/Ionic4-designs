@@ -1,139 +1,137 @@
 <ion-header>
-    <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-menu-button></ion-menu-button>
-        </ion-buttons>
-        <ion-title>food-list</ion-title>
-    </ion-toolbar>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>food-list</ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-row>
-        <ion-col size="12" padding>
-            <ng-select [items]="accounts" bindLabel="Name" bindValue="cid" [(ngModel)]="selectedAccount" (search)="searchResult($event)"></ng-select>
-        </ion-col>
-        <ion-col padding class="col-borderBottom" size="12">
-            <ion-slides pager="true" [options]="slideOpts">
-                <ion-slide>
-                    <img src="../../assets/imgs/images1.jpg" />
-                </ion-slide>
-                <ion-slide>
-                    <img src="../../assets/imgs/images2.jpg" />
-                </ion-slide>
-                <ion-slide>
-                    <img src="../../assets/imgs/images3.jpg" />
-                </ion-slide>
-            </ion-slides>
-        </ion-col>
-        <ion-col size="9" padding-start>
-            <strong>
+  <ion-row>
+
+    <ion-col padding class="col-borderBottom" size="12">
+      <ion-slides pager="true" [options]="slideOpts">
+        <ion-slide>
+          <img src="../../assets/imgs/images1.jpg" />
+        </ion-slide>
+        <ion-slide>
+          <img src="../../assets/imgs/images2.jpg" />
+        </ion-slide>
+        <ion-slide>
+          <img src="../../assets/imgs/images3.jpg" />
+        </ion-slide>
+      </ion-slides>
+    </ion-col>
+    <ion-col size="9" padding-start>
+      <strong>
         <p no-margin class="total_restaurant">536 Restaurants near you</p>
       </strong>
-        </ion-col>
-        <ion-col size="3" text-right>
-            <ion-button fill="clear" size="small">
-                <ion-icon slot="start" name="options" class="rotate-icon-filter"></ion-icon>
-                Filter
-            </ion-button>
-        </ion-col>
-        <ion-col size="12">
-            <ion-card>
-                <ion-item lines="none">
-                  <ion-avatar slot="start" class="set-thumbnail-round">
-                      <img src="../../assets/imgs/images3.jpg">
-                  </ion-avatar>
-                  <ion-label>
-                    <h2><strong>Gotan - LES</strong></h2>
-                    <p>Breakfast and Brunch, Coffee</p>
-                    <p>Address</p>
-                  </ion-label>
-                </ion-item>
-            </ion-card>
-            <ion-list>
-                <ion-item lines="none">
-                    <ion-thumbnail slot="start" class="set-thumbnail">
-                        <img src="../../assets/imgs/images3.jpg">
-                    </ion-thumbnail>
-                    <ion-label>
-                        <h2><strong>Gotan - LES</strong></h2>
-                        <p>Breakfast and Brunch, Coffee</p>
-                        <ion-chip color="success" no-margin no-padding padding-horizontal class="set-chips">
-                            <ion-label>50% Offers</ion-label>
-                        </ion-chip>
-                        <ion-chip color="danger" margin-right no-padding padding-horizontal class="set-chips">
-                            <ion-icon name="star" no-margin size="small"></ion-icon>
-                            <ion-icon name="star" no-margin size="small"></ion-icon>
-                            <ion-icon name="star" no-margin size="small"></ion-icon>
-                            <ion-icon name="star" no-margin size="small"></ion-icon>
-                            <ion-icon name="star-outline" no-margin size="small"></ion-icon>
-                        </ion-chip>
-                    </ion-label>
-                    <ion-icon name="heart-empty" slot="end" size="small" color="dark" class="set-fav"></ion-icon>
-                </ion-item>
-                <ion-item lines="none">
-                    <ion-thumbnail slot="start" class="set-thumbnail">
-                        <img src="../../assets/imgs/images2.jpg">
-                    </ion-thumbnail>
-                    <ion-label>
-                        <h2><strong>Polar - Creams</strong></h2>
-                        <p>Breakfast and Brunch, Coffee</p>
-                        <ion-chip color="success" no-margin no-padding padding-horizontal class="set-chips">
-                            <ion-label>30% Offers</ion-label>
-                        </ion-chip>
-                        <ion-chip color="danger" margin-right no-padding padding-horizontal class="set-chips">
-                            <ion-icon name="star" no-margin size="small"></ion-icon>
-                            <ion-icon name="star" no-margin size="small"></ion-icon>
-                            <ion-icon name="star" no-margin size="small"></ion-icon>
-                            <ion-icon name="star" no-margin size="small"></ion-icon>
-                            <ion-icon name="star-outline" no-margin size="small"></ion-icon>
-                        </ion-chip>
-                    </ion-label>
-                    <ion-icon name="heart" slot="end" size="small" color="danger" class="set-fav"></ion-icon>
-                </ion-item>
-                <ion-item lines="none">
-                    <ion-thumbnail slot="start" class="set-thumbnail">
-                        <img src="../../assets/imgs/images1.jpg">
-                    </ion-thumbnail>
-                    <ion-label>
-                        <h2><strong>Polar - Creams</strong></h2>
-                        <p>Breakfast and Brunch, Coffee</p>
-                        <ion-chip color="success" no-margin no-padding padding-horizontal class="set-chips">
-                            <ion-label>70% Offers</ion-label>
-                        </ion-chip>
-                        <ion-chip color="danger" margin-right no-padding padding-horizontal class="set-chips">
-                            <ion-icon name="star" no-margin size="small"></ion-icon>
-                            <ion-icon name="star" no-margin size="small"></ion-icon>
-                            <ion-icon name="star" no-margin size="small"></ion-icon>
-                            <ion-icon name="star-half" no-margin size="small"></ion-icon>
-                            <ion-icon name="star-outline" no-margin size="small"></ion-icon>
-                        </ion-chip>
-                    </ion-label>
-                    <ion-icon name="heart-empty" slot="end" size="small" color="dark" class="set-fav"></ion-icon>
-                </ion-item>
-                <ion-item lines="none">
-                    <ion-thumbnail slot="start" class="set-thumbnail">
-                        <img src="../../assets/imgs/images4.jpg">
-                    </ion-thumbnail>
-                    <ion-label>
-                        <h2><strong>Polar - Creams</strong></h2>
-                        <p>Breakfast and Brunch, Coffee</p>
-                        <ion-chip color="success" no-margin no-padding padding-horizontal class="set-chips">
-                            <ion-label>10% Offers</ion-label>
-                        </ion-chip>
-                        <ion-chip color="danger" margin-right no-padding padding-horizontal class="set-chips">
-                            <ion-icon name="star" no-margin size="small"></ion-icon>
-                            <ion-icon name="star" no-margin size="small"></ion-icon>
-                            <ion-icon name="star" no-margin size="small"></ion-icon>
-                            <ion-icon name="star-outline" no-margin size="small"></ion-icon>
-                            <ion-icon name="star-outline" no-margin size="small"></ion-icon>
-                        </ion-chip>
-                    </ion-label>
-                    <ion-icon name="heart-empty" slot="end" size="small" color="dark" class="set-fav"></ion-icon>
-                </ion-item>
-            </ion-list>
-        </ion-col>
-    </ion-row>
-    <!-- <ion-row>
+    </ion-col>
+    <ion-col size="3" text-right>
+      <ion-button fill="clear" size="small">
+        <ion-icon slot="start" name="options" class="rotate-icon-filter"></ion-icon>
+        Filter
+      </ion-button>
+    </ion-col>
+    <ion-col size="12">
+      <ion-card>
+        <ion-item lines="none">
+          <ion-avatar slot="start" class="set-thumbnail-round">
+            <img src="../../assets/imgs/images3.jpg">
+          </ion-avatar>
+          <ion-label>
+            <h2><strong>Gotan - LES</strong></h2>
+            <p>Breakfast and Brunch, Coffee</p>
+            <p>Address</p>
+          </ion-label>
+        </ion-item>
+      </ion-card>
+      <ion-list>
+        <ion-item lines="none">
+          <ion-thumbnail slot="start" class="set-thumbnail">
+            <img src="../../assets/imgs/images3.jpg">
+          </ion-thumbnail>
+          <ion-label>
+            <h2><strong>Gotan - LES</strong></h2>
+            <p>Breakfast and Brunch, Coffee</p>
+            <ion-chip color="success" no-margin no-padding padding-horizontal class="set-chips">
+              <ion-label>50% Offers</ion-label>
+            </ion-chip>
+            <ion-chip color="danger" margin-right no-padding padding-horizontal class="set-chips">
+              <ion-icon name="star" no-margin size="small"></ion-icon>
+              <ion-icon name="star" no-margin size="small"></ion-icon>
+              <ion-icon name="star" no-margin size="small"></ion-icon>
+              <ion-icon name="star" no-margin size="small"></ion-icon>
+              <ion-icon name="star-outline" no-margin size="small"></ion-icon>
+            </ion-chip>
+          </ion-label>
+          <ion-icon name="heart-empty" slot="end" size="small" color="dark" class="set-fav"></ion-icon>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-thumbnail slot="start" class="set-thumbnail">
+            <img src="../../assets/imgs/images2.jpg">
+          </ion-thumbnail>
+          <ion-label>
+            <h2><strong>Polar - Creams</strong></h2>
+            <p>Breakfast and Brunch, Coffee</p>
+            <ion-chip color="success" no-margin no-padding padding-horizontal class="set-chips">
+              <ion-label>30% Offers</ion-label>
+            </ion-chip>
+            <ion-chip color="danger" margin-right no-padding padding-horizontal class="set-chips">
+              <ion-icon name="star" no-margin size="small"></ion-icon>
+              <ion-icon name="star" no-margin size="small"></ion-icon>
+              <ion-icon name="star" no-margin size="small"></ion-icon>
+              <ion-icon name="star" no-margin size="small"></ion-icon>
+              <ion-icon name="star-outline" no-margin size="small"></ion-icon>
+            </ion-chip>
+          </ion-label>
+          <ion-icon name="heart" slot="end" size="small" color="danger" class="set-fav"></ion-icon>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-thumbnail slot="start" class="set-thumbnail">
+            <img src="../../assets/imgs/images1.jpg">
+          </ion-thumbnail>
+          <ion-label>
+            <h2><strong>Polar - Creams</strong></h2>
+            <p>Breakfast and Brunch, Coffee</p>
+            <ion-chip color="success" no-margin no-padding padding-horizontal class="set-chips">
+              <ion-label>70% Offers</ion-label>
+            </ion-chip>
+            <ion-chip color="danger" margin-right no-padding padding-horizontal class="set-chips">
+              <ion-icon name="star" no-margin size="small"></ion-icon>
+              <ion-icon name="star" no-margin size="small"></ion-icon>
+              <ion-icon name="star" no-margin size="small"></ion-icon>
+              <ion-icon name="star-half" no-margin size="small"></ion-icon>
+              <ion-icon name="star-outline" no-margin size="small"></ion-icon>
+            </ion-chip>
+          </ion-label>
+          <ion-icon name="heart-empty" slot="end" size="small" color="dark" class="set-fav"></ion-icon>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-thumbnail slot="start" class="set-thumbnail">
+            <img src="../../assets/imgs/images4.jpg">
+          </ion-thumbnail>
+          <ion-label>
+            <h2><strong>Polar - Creams</strong></h2>
+            <p>Breakfast and Brunch, Coffee</p>
+            <ion-chip color="success" no-margin no-padding padding-horizontal class="set-chips">
+              <ion-label>10% Offers</ion-label>
+            </ion-chip>
+            <ion-chip color="danger" margin-right no-padding padding-horizontal class="set-chips">
+              <ion-icon name="star" no-margin size="small"></ion-icon>
+              <ion-icon name="star" no-margin size="small"></ion-icon>
+              <ion-icon name="star" no-margin size="small"></ion-icon>
+              <ion-icon name="star-outline" no-margin size="small"></ion-icon>
+              <ion-icon name="star-outline" no-margin size="small"></ion-icon>
+            </ion-chip>
+          </ion-label>
+          <ion-icon name="heart-empty" slot="end" size="small" color="dark" class="set-fav"></ion-icon>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+  <!-- <ion-row>
     <ion-col size="12">
       <ion-searchbar placeholder="Search food"></ion-searchbar>
     </ion-col>
@@ -172,7 +170,7 @@
       </div>
     </ion-col>
   </ion-row> -->
-    <!-- <ion-row>
+  <!-- <ion-row>
     <ion-col size="6" padding-horizontal margin-bottom>
       <img src="../../assets/imgs/images1.jpg" height="100px" width="100%" />
       <ion-label>

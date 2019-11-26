@@ -46,7 +46,12 @@ const routes: Routes = [
   {
     path: 'login-5',
     loadChildren: './login5/login5.module#Login5PageModule'
+  },
+  {
+    path: 'pdf-demo',
+    loadChildren: './pdf-demo/pdf-demo.module#PdfDEmoPageModule'
   }
+
 ];
 
 @NgModule({
