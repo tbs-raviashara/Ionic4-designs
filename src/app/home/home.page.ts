@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, ActionSheetController } from '@ionic/angular';
 import { DemoModalPage } from '../demo-modal/demo-modal.page';
 import { File } from '@ionic-native/file/ngx';
 // import { FileEncryption } from '@ionic-native/file-encryption/ngx';
-
+import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss']
 })
 export class HomePage {
-  constructor(public modal: ModalController, public file: File) { }
+  constructor(public camera: Camera, public modal: ModalController, public file: File, public actionCtrl: ActionSheetController) { }
 
   ionViewWillEnter() {
     // this.fileEncryption.decrypt('../../assets/msgstore-2019-08-07.1.db.crypt12', '').then(success => { console.log('success', success); }).catch(Error => { console.log('Error', Error); });
@@ -59,6 +59,57 @@ export class HomePage {
       console.log('File Created Successfully');
     }).catch((createFileErr: any) => {
       console.log('File Not Created');
+    });
+  }
+
+  chooseOptions() {
+    this.actionCtrl.create({
+      header: 'Change Profile Picture',
+      buttons: [{
+        text: 'Remove',
+        role: 'destructive',
+        icon: 'trash',
+        handler: () => {
+          console.log('Delete clicked');
+        }
+      }, {
+        text: 'Choose from Camera',
+        icon: 'camera',
+        handler: () => {
+          this.changeImage(this.camera.PictureSourceType.CAMERA);
+        }
+      }, {
+        text: 'Choose from Gallery',
+        icon: 'images',
+        handler: () => {
+          this.changeImage(this.camera.PictureSourceType.PHOTOLIBRARY);
+        }
+      }, {
+        text: 'Cancel',
+        icon: 'close',
+        role: 'cancel',
+        handler: () => {
+
+        }
+      }]
+    }).then((actionSheet: any) => {
+      actionSheet.present();
+    });
+  }
+
+  changeImage(val: any) {
+    const options: CameraOptions = {
+      quality: 100,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE,
+      sourceType: val
+    };
+    this.camera.getPicture(options).then((imageData) => {
+      let base64Image = 'data:image/jpeg;base64,' + imageData;
+      console.log(base64Image);
+    }, (err) => {
+      console.log(err);
     });
   }
 }

@@ -14,6 +14,7 @@ import { Printer } from '@ionic-native/printer/ngx';
 import { FileOpener } from '@ionic-native/file-opener/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { DemoModalPageModule } from './demo-modal/demo-modal.module';
+import { Camera } from '@ionic-native/camera/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,6 +33,7 @@ import { DemoModalPageModule } from './demo-modal/demo-modal.module';
     Printer,
     File,
     FileOpener,
+    Camera,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
