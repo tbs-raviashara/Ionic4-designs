@@ -50,8 +50,11 @@ const routes: Routes = [
   {
     path: 'pdf-demo',
     loadChildren: './pdf-demo/pdf-demo.module#PdfDEmoPageModule'
+  },
+  {
+    path: 'demo-modal',
+    loadChildren: './demo-modal/demo-modal.module#DemoModalPageModule'
   }
-
 ];
 
 @NgModule({

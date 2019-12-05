@@ -1,0 +1,34 @@
+<ion-header mode="ios">
+  <ion-toolbar color="primary" mode="ios" class="ion-padding-top">
+    <ion-buttons slot="start" class="ion-padding-top registerAccount">
+      <ion-button fill="outline" (click)="registerUser()">
+        Register Account
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="closeIcon ion-padding-top">
+      <ion-button (click)="closeModal()" fill="outline">
+        Close
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding registerPage">
+  <ion-row>
+    <ion-col size="12">
+      <ion-item class="ion-no-padding" color="primary">
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input type="email" name="useremail" [(ngModel)]="registerData.useremail"></ion-input>
+      </ion-item>
+      <ion-item class="ion-no-padding" color="primary">
+        <ion-label position="stacked">Password</ion-label>
+        <ion-input type="password" name="userPassword" [(ngModel)]="registerData.userPassword"></ion-input>
+      </ion-item>
+      <ion-item class="ion-no-padding" color="primary">
+        <ion-label position="stacked">Confirm Password</ion-label>
+        <ion-input type="password" name="userConfirmPassword" [(ngModel)]="registerData.userConfirmPassword">
+        </ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-content>

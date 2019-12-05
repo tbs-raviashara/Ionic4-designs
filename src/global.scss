@@ -34,3 +34,10 @@
     --border-width: 0;
   }
 }
+
+.my-custom-demo-modal-css {
+  top: 50%;
+  position: absolute;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}

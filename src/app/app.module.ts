@@ -13,6 +13,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { Printer } from '@ionic-native/printer/ngx';
 import { FileOpener } from '@ionic-native/file-opener/ngx';
 import { File } from '@ionic-native/file/ngx';
+import { DemoModalPageModule } from './demo-modal/demo-modal.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +24,7 @@ import { File } from '@ionic-native/file/ngx';
     IonicModule.forRoot(),
     AppRoutingModule,
     NgSelectModule,
+    DemoModalPageModule
   ],
   providers: [
     StatusBar,
