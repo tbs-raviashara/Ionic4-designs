@@ -54,7 +54,8 @@ const routes: Routes = [
   {
     path: 'demo-modal',
     loadChildren: './demo-modal/demo-modal.module#DemoModalPageModule'
-  }
+  },  { path: 'form-wizard', loadChildren: './form-wizard/form-wizard.module#FormWizardPageModule' }
+
 ];
 
 @NgModule({

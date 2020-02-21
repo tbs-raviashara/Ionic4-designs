@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>formWizard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="pageName === 'step1'" class="animated" [ngClass]="buttonName=='next' ? 'slideInRight':'slideInLeft'">
+    <ion-card-header>
+      <ion-card-title>Awesome Title 1</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button (click)="changePage('step1')" shape="round">
+        back
+      </ion-button>
+      <ion-button (click)="changePage('step2','next')" shape="round">
+        next
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="pageName === 'step2'" class="animated" [ngClass]="buttonName=='next' ? 'slideInRight':'slideInLeft'">
+    <ion-card-header>
+      <ion-card-title>Awesome Title 2</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button (click)="changePage('step1','back')" shape="round">
+        back
+      </ion-button>
+      <ion-button (click)="changePage('step3','next')" shape="round">
+        next
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card *ngIf="pageName === 'step3'" class="animated" [ngClass]="buttonName=='next' ? 'slideInRight':'slideInLeft'">
+    <ion-card-header>
+      <ion-card-title>Awesome Title 3</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button (click)="changePage('step2','back')" shape="round">
+        back
+      </ion-button>
+      <ion-button (click)="changePage('step3','next')" shape="round">
+        next
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
