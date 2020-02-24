@@ -54,7 +54,9 @@ const routes: Routes = [
   {
     path: 'demo-modal',
     loadChildren: './demo-modal/demo-modal.module#DemoModalPageModule'
-  },  { path: 'form-wizard', loadChildren: './form-wizard/form-wizard.module#FormWizardPageModule' }
+  },
+  { path: 'form-wizard', loadChildren: './form-wizard/form-wizard.module#FormWizardPageModule' },
+  { path: 'chat-design1', loadChildren: './chat-design1/chat-design1.module#ChatDesign1PageModule' }
 
 ];
 
