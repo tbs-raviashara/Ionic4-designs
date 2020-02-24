@@ -52,5 +52,31 @@ export class ChatDesign1Page{
       sent: true
     }
   ];
+  input = "";
   constructor() { }
+
+  send() {
+    if (this.input != "") {
+      this.conversation.push({
+        text: this.input,
+        sender: 1,
+        image: "assets/images/sg1.jpg"
+      });
+      this.input = "";
+      setTimeout(() => {
+        this.scrollToBottom();
+      }, 10);
+    }
+  }
+
+  scrollToBottom() {
+    let content = document.getElementById("chat-container");
+    let parent = document.getElementById("chat-parent");
+    let scrollOptions = {
+      left: 0,
+      top: content.offsetHeight
+    };
+
+    parent.scrollTo(scrollOptions);
+  }
 }
