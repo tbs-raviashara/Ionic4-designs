@@ -8,11 +8,18 @@
 </ion-header>
 
 <ion-content>
+  <ion-segment (ionChange)="segmentChanged($event)" scrollable [value]="currentDate" mode="ios">
+    <ion-segment-button [value]="date | date : 'dd-MMM'" *ngFor="let date of totalDays" mode="ios">
+      <ion-label>{{date | date : 'dd-EEE'}}</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
   <div class="main">
     <div class="chat-box">
       <div class="message-area">
         <div class="message" *ngFor="let message of messages" [ngClass]="getClasses(message.type)">
-          <img [src]="message?.img" class="userImage"><p>{{message?.text}}</p>
+          <img [src]="message?.img" class="userImage">
+          <p>{{message?.text}}</p>
         </div>
       </div>
     </div>
