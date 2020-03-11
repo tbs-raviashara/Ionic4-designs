@@ -15,6 +15,7 @@ import { FileOpener } from '@ionic-native/file-opener/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { DemoModalPageModule } from './demo-modal/demo-modal.module';
 import { Camera } from '@ionic-native/camera/ngx';
+import { ComponentsModule } from './Components/components.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,7 +26,8 @@ import { Camera } from '@ionic-native/camera/ngx';
     IonicModule.forRoot(),
     AppRoutingModule,
     NgSelectModule,
-    DemoModalPageModule
+    DemoModalPageModule,
+    ComponentsModule
   ],
   providers: [
     StatusBar,
