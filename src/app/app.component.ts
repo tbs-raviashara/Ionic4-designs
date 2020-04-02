@@ -31,6 +31,11 @@ export class AppComponent {
       icon: 'list'
     },
     {
+      title: 'Login 6',
+      url: '/login-6',
+      icon: 'list'
+    },
+    {
       title: 'Food List',
       url: '/food-list',
       icon: 'list'
