@@ -16,6 +16,7 @@ import { File } from '@ionic-native/file/ngx';
 import { DemoModalPageModule } from './demo-modal/demo-modal.module';
 import { Camera } from '@ionic-native/camera/ngx';
 import { ComponentsModule } from './Components/components.module';
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -36,6 +37,7 @@ import { ComponentsModule } from './Components/components.module';
     File,
     FileOpener,
     Camera,
+    ImagePicker,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

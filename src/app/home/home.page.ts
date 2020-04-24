@@ -4,13 +4,15 @@ import { DemoModalPage } from '../demo-modal/demo-modal.page';
 import { File } from '@ionic-native/file/ngx';
 // import { FileEncryption } from '@ionic-native/file-encryption/ngx';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss']
 })
 export class HomePage {
-  constructor(public camera: Camera, public modal: ModalController, public file: File, public actionCtrl: ActionSheetController) { }
+  constructor(private imagePicker: ImagePicker, public camera: Camera, public modal: ModalController, public file: File, public actionCtrl: ActionSheetController) { }
 
   ionViewWillEnter() {
     // this.fileEncryption.decrypt('../../assets/msgstore-2019-08-07.1.db.crypt12', '').then(success => { console.log('success', success); }).catch(Error => { console.log('Error', Error); });
@@ -95,6 +97,18 @@ export class HomePage {
     }).then((actionSheet: any) => {
       actionSheet.present();
     });
+  }
+
+  chooseMultipleImages() {
+    let options = {
+      quality: 100,
+      outputType: 1
+    };
+    this.imagePicker.getPictures(options).then((results) => {
+      for (let i = 0; i < results.length; i++) {
+        console.log('Image URI: ' + results[i]);
+      }
+    }, (err) => { });
   }
 
   changeImage(val: any) {
