@@ -49,9 +49,17 @@
   </ion-row>
 </ion-content> -->
 
-<ion-content>
-  <ion-list *ngFor="let itm of items" class="animated fadeInLeft slower">
-    <p>{{itm?.title}}</p>
-    <p>{{itm?.note}}</p>
-  </ion-list>
+<ion-content class="ion-padding">
+  <ion-card *ngFor="let itm of items" class="animated fadeInLeft slower">
+    <ion-item>
+      <ion-label>{{itm?.id}}
+        <p>{{itm?.name}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="getProducts($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>
