@@ -70,9 +70,11 @@ const routes: Routes = [
   {
     path: 'login-6',
     loadChildren: './login6/login6.module#Login6PageModule'
+  },
+  {
+    path: 'native-functionality',
+    loadChildren: './native-functionality/native-functionality.module#NativeFunctionalityPageModule'
   }
-
-
 ];
 
 @NgModule({

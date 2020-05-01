@@ -5,8 +5,8 @@
 </ion-header>
 
 
-<ion-content padding class="contentBg" #content id="chat-parent" overflow-scroll="true" (ionScrollStart)="logScrollStart()"
-  (ionScroll)="logScrolling($event)">
+<ion-content padding class="contentBg" #content id="chat-parent" overflow-scroll="true"
+  (ionScrollStart)="logScrollStart()">
   <div>
     <div id="chat-container">
       <span class="line-style"></span>
@@ -22,8 +22,8 @@
               </div>
             </div>
           </div>
-          <div class="message-right" *ngIf="msg.userId == User">
-            <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner>
+          <div class="message-right" *ngIf="msg?.userId == User">
+            <ion-spinner name="dots" *ngIf="msg?.status === 'pending'"></ion-spinner>
             <div class="msg-detail">
               <div class="msg-info">
               </div>
@@ -44,8 +44,8 @@
   <ion-toolbar class="footerSections">
     <div class="containerFooter">
       <div class="inputConatiner">
-        <ion-input class="placeholdertext inputMessage inputBg" type="text" placeholder="Type a message" [(ngModel)]="inp_text"
-          autofocus="true" padding-start></ion-input>
+        <ion-input class="placeholdertext inputMessage inputBg" type="text" placeholder="Type a message"
+          [(ngModel)]="inp_text" autofocus="true" padding-start></ion-input>
       </div>
       <div class="send-button-parent">
         <ion-button (click)="sendMsg()" class="sendBtn" color="primary">
