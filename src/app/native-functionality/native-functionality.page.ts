@@ -3,6 +3,8 @@ import { ImagePicker } from '@ionic-native/image-picker/ngx';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 import { File } from '@ionic-native/file/ngx';
 import { ActionSheetController } from '@ionic/angular';
+import { Crop } from '@ionic-native/crop/ngx';
+import { Base64 } from '@ionic-native/base64/ngx';
 
 @Component({
   selector: 'app-native-functionality',
@@ -12,7 +14,7 @@ import { ActionSheetController } from '@ionic/angular';
 export class NativeFunctionalityPage {
   public folderName = "LoginDemo";
   public fileName = "demo.text";
-  constructor(public actionCtrl: ActionSheetController, private imagePicker: ImagePicker, public camera: Camera, public file: File) { }
+  constructor(private base64: Base64, private crop: Crop, public actionCtrl: ActionSheetController, private imagePicker: ImagePicker, public camera: Camera, public file: File) { }
 
   check_Folder() {
     this.file.checkDir(this.file.externalRootDirectory, this.folderName).then((response: any) => {
@@ -100,18 +102,29 @@ export class NativeFunctionalityPage {
   changeImage(val: any) {
     const options: CameraOptions = {
       quality: 100,
-      destinationType: this.camera.DestinationType.DATA_URL,
+      destinationType: this.camera.DestinationType.FILE_URI,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE,
       sourceType: val,
-      allowEdit: true
     };
     this.camera.getPicture(options).then((imageData) => {
-      let base64Image = 'data:image/jpeg;base64,' + imageData;
-      console.log(base64Image);
+      this.cropImage(imageData);
     }, (err) => {
       console.log(err);
     });
   }
 
+  cropImage(val: any) {
+    this.crop.crop(val, { quality: 100 })
+      .then(
+        ((newImage: any) => {
+          this.base64.encodeFile(newImage).then((base64File: string) => {
+            console.log(base64File);
+          }, (err) => {
+            console.log(err);
+          });
+        }),
+        error => console.error('Error cropping image', error)
+      );
+  }
 }

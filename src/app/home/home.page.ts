@@ -13,7 +13,7 @@ import { ImagePicker } from '@ionic-native/image-picker/ngx';
 })
 export class HomePage {
   constructor(public modal: ModalController) { }
-
+  bgColor:string ="red";
   ionViewWillEnter() {
     // this.fileEncryption.decrypt('../../assets/msgstore-2019-08-07.1.db.crypt12', '').then(success => { console.log('success', success); }).catch(Error => { console.log('Error', Error); });
   }
