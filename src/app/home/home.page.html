@@ -11,60 +11,45 @@
 
 <ion-content class="loginPage">
   <ion-grid>
-    <app-dynamic-value name="Ravi Ashara"></app-dynamic-value>
+    <!-- <app-dynamic-value name="Ravi Ashara"></app-dynamic-value> -->
     <ion-row>
-      <ion-col size="12" text-center>
-        <ion-button (click)="check_Folder()">
-          Check Folder and create file
-        </ion-button>
-      </ion-col>
-      <ion-col size="12" text-center>
-        <ion-button (click)="chooseOptions()">
-          Change Image
-        </ion-button>
-      </ion-col>
-      <ion-col size="12" text-center>
-        <ion-button (click)="chooseMultipleImages()">
-          Select Multiple Images
-        </ion-button>
-      </ion-col>
-      <ion-col size="12" text-center class="setLogoPadding">
+      <ion-col size="12" class="ion-text-center setLogoPadding">
         <img src="../../assets/icon/favicon.png" />
       </ion-col>
-      <ion-col size="12" text-center>
+      <ion-col size="12" class="ion-text-center">
         <p class="login-Heading" no-margin>
           <ion-text color="primary">Welcome to PinPin</ion-text>
         </p>
-        <h5 color="primary" no-margin>Enter your credentials to log in</h5>
+        <h5 color="primary" class="ion-no-margin">Enter your credentials to log in</h5>
       </ion-col>
       <ion-col size="12" class="set-z-index-first-col">
         <ion-card color="primary" class="card-border-radius">
-          <ion-item color="primary" no-padding margin-horizontal>
+          <ion-item color="primary" class="ion-no-padding ion-margin-horizontal">
             <ion-label position="stacked">
               <ion-text color="secondary">Username</ion-text>
             </ion-label>
             <ion-input></ion-input>
           </ion-item>
-          <ion-item color="primary" no-padding margin-horizontal>
+          <ion-item color="primary" class="ion-no-padding ion-margin-horizontal">
             <ion-label position="stacked">
               <ion-text color="secondary">Password</ion-text>
             </ion-label>
             <ion-input type="password"></ion-input>
           </ion-item>
-          <p text-center>
+          <p class="ion-text-center">
             <ion-text color="secondary">Forgot your password?</ion-text>
           </p>
-          <p text-center no-margin>
+          <p class="ion-no-margin ion-text-center">
             <ion-button shape="round" color="secondary">
               <ion-text color="primary">Login in</ion-text>
             </ion-button>
           </p>
         </ion-card>
       </ion-col>
-      <ion-col size="10" offset="1" class="set_col">
-        <div text-center class="set_createAccount" (click)="showRegisterPage()">
+      <ion-col size="10" offset="1" class="set_col" (click)="showRegisterPage()">
+        <div class="set_createAccount ion-text-center">
           <ion-text color="medium">
-            <h5 no-margin>Create a new account</h5>
+            <h5 class="ion-no-margin">Create a new account</h5>
           </ion-text>
         </div>
       </ion-col>
