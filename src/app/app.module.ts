@@ -16,7 +16,9 @@ import { File } from '@ionic-native/file/ngx';
 import { DemoModalPageModule } from './demo-modal/demo-modal.module';
 import { Camera } from '@ionic-native/camera/ngx';
 import { ComponentsModule } from './Components/components.module';
-
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
+import { Crop } from '@ionic-native/crop/ngx';
+import { Base64 } from '@ionic-native/base64/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -36,6 +38,9 @@ import { ComponentsModule } from './Components/components.module';
     File,
     FileOpener,
     Camera,
+    ImagePicker,
+    Crop,
+    Base64,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

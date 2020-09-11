@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+
+  { path: 'msg-list', loadChildren: './msg-list/msg-list.module#MsgListPageModule' }
+
   {
     path: '',
     redirectTo: 'login-1',
@@ -55,13 +58,28 @@ const routes: Routes = [
     path: 'demo-modal',
     loadChildren: './demo-modal/demo-modal.module#DemoModalPageModule'
   },
-  { path: 'form-wizard', loadChildren: './form-wizard/form-wizard.module#FormWizardPageModule' },
-  { path: 'chat-design1', loadChildren: './chat-design1/chat-design1.module#ChatDesign1PageModule' },  { path: 'chat-design2', loadChildren: './chat-design2/chat-design2.module#ChatDesign2PageModule' },
+  {
+    path: 'form-wizard',
+    loadChildren: './form-wizard/form-wizard.module#FormWizardPageModule'
+  },
+  {
+    path: 'chat-design1',
+    loadChildren: './chat-design1/chat-design1.module#ChatDesign1PageModule'
+  },
+  {
+    path: 'chat-design2',
+    loadChildren: './chat-design2/chat-design2.module#ChatDesign2PageModule'
+  },
+  {
+    path: 'login-6',
+    loadChildren: './login6/login6.module#Login6PageModule'
+  },
+  {
+    path: 'native-functionality',
+    loadChildren: './native-functionality/native-functionality.module#NativeFunctionalityPageModule'
+  },
   { path: 'msg-list', loadChildren: './msg-list/msg-list.module#MsgListPageModule' }
-
-
 ];
-
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
