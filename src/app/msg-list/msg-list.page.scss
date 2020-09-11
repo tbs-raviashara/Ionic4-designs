@@ -1,0 +1,25 @@
+.onlineScroll {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 5px;
+    .image {
+        height: 12vw;
+        width: 12vw;
+        display: inline-block;
+        margin-left: 5px;
+        margin-right: 5px;
+        img {
+            border-radius: 50%;
+        }
+        .greenDots {
+            width: 10px;
+            height: 10px;
+            background-color: green;
+            border-radius: 50%;
+            display: inline-block;
+            margin-left: -12px;
+            border: 2px solid #fff;
+        }
+    }
+}
