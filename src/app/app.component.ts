@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-
+import { Push, PushObject, PushOptions } from '@ionic-native/push/ngx';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -75,7 +75,8 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    public push: Push
   ) {
     this.initializeApp();
   }
@@ -83,7 +84,50 @@ export class AppComponent {
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      setTimeout(() => {
+        this.splashScreen.hide();
+      }, 5000);
+      this.pushNotifictions();
     });
+  }
+
+  pushNotifictions() {
+    const options: PushOptions = {
+      android: {
+        senderID: '65950833915'
+      },
+      browser: {},
+      ios: {
+        alert: true,
+        badge: true,
+        sound: true,
+        clearBadge: true
+      },
+      windows: {},
+
+    };
+
+    const pushObject: PushObject = this.push.init(options);
+
+    pushObject.on('registration').subscribe((data: any) => {
+
+      console.log('Device registered', data);
+      console.log('Device registrationId ', data.registrationId);
+      localStorage.push_deviceToken = data.registrationId;
+    });
+
+    pushObject.on('notification').subscribe((data: any) => {
+      if (data.additionalData.foreground) {
+        console.log('Received a notification foreground ', data);
+        // if application open
+      } else {
+        console.log('Received a notification background ', data);
+      }
+    });
+
+    pushObject.on('error').subscribe(error => {
+      console.error('Error with Push plugin' + JSON.stringify(error));
+    });
+
   }
 }

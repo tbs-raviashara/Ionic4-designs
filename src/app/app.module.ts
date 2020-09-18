@@ -19,6 +19,7 @@ import { ComponentsModule } from './Components/components.module';
 import { ImagePicker } from '@ionic-native/image-picker/ngx';
 import { Crop } from '@ionic-native/crop/ngx';
 import { Base64 } from '@ionic-native/base64/ngx';
+import { Push } from '@ionic-native/push/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -41,8 +42,9 @@ import { Base64 } from '@ionic-native/base64/ngx';
     ImagePicker,
     Crop,
     Base64,
+    Push,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

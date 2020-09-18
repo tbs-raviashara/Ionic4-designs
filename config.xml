@@ -18,7 +18,7 @@
     <preference name="FadeSplashScreenDuration" value="300" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashScreenDelay" value="5000" />
     <preference name="android-targetSdkVersion" value="29" />
     <platform name="android">
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
@@ -115,6 +115,10 @@
     <plugin name="com-badrit-base64" spec="0.2.0" />
     <plugin name="cordova-android-support-gradle-release" spec="3.0.1">
         <variable name="ANDROID_SUPPORT_VERSION" value="27.+" />
+    </plugin>
+    <plugin name="phonegap-plugin-push" spec="2.3.0">
+        <variable name="ANDROID_SUPPORT_V13_VERSION" value="27.+" />
+        <variable name="FCM_VERSION" value="17.0.+" />
     </plugin>
     <engine name="android" spec="7.1.4" />
 </widget>
